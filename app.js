@@ -40,6 +40,11 @@ operator.forEach(operator => operator.addEventListener('click', prepareOperation
 document.getElementById('clear').addEventListener('click', clearDisplay);
 document.getElementById('equals').addEventListener('click', equals);
 
+window.addEventListener('keydown', function(e){
+    const key = document.querySelector(`button[data-key='${e.keyCode}']`);
+    key.click();
+});
+
 let currentValue = '';
 let currentOperator;
 let operand1;
