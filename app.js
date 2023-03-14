@@ -52,12 +52,12 @@ function operandInput(e) {
     if (keepGoing == true && recentOperator == false) {
         currentValue = '';
         keepGoing = false;
-    }
-    if (this.value !== 'backspace'){
-        currentValue += this.value;
-    } else if (this.value == 'backspace') {
+    } if (this.value == 'backspace') {
         currentValue = currentValue.slice(0, -1);
+    } if (currentValue.includes('.') && this.value == '.') {
+        return;
     }
+    currentValue += this.value;
     updateDisplay();
 }
 
