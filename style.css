@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items:center;
+    
 }
 
 #calculator {
@@ -12,17 +13,26 @@
     border: 1px solid black;
     height: 600px;
     width: 400px;
+    background-color:rgb(79, 78, 78);
 }
 
+#top {
+    display: flex;
+    align-items: center;
+    grid-area: 1 / 1 / 1 / 5;
+}
 #display {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     font-size: 72px;
     border: 1px solid black;
+    padding: 10px;
     margin: 10px;
-    height: 100px;
+    height: 80%;
+    width: 100%;
     grid-area: 1 / 1 / 1 / 5;
+    background-color: darkcyan;
 }
 
 #zero {
@@ -32,4 +42,7 @@
 button {
     font-size: 20px;
     font-weight: 700;
+    color: white;
+    background-color: rgb(34, 34, 34);
 }
+
